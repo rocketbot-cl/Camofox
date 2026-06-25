@@ -1,0 +1,153 @@
+
+
+
+
+# Camofox
+  
+Module to interact with Camofox Browser Server from Rocketbot through its REST API. It allows checking the server, creating tabs, navigating, getting snapshots, clicking, typing text and taking screenshots.  
+
+*Read this in other languages: [English](Manual_camofox.md), [Português](Manual_camofox.pr.md), [Español](Manual_camofox.es.md)*
+  
+![banner](imgs/Camofox_modulo.jpg)
+## How to install this module
+  
+To install the module in Rocketbot Studio, it can be done in two ways:
+1. Manual: __Download__ the .zip file and unzip it in the modules folder. The folder name must be the same as the module and inside it must have the following files and folders: \__init__.py, package.json, docs, example and libs. If you have the application open, refresh your browser to be able to use the new module.
+2. Automatic: When entering Rocketbot Studio on the right margin you will find the **Addons** section, select **Install Mods**, search for the desired module and press install.  
+
+
+## Description of the commands
+
+### Start Server
+  
+Start the Camofox Browser Server in background.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Base URL|Camofox server URL. Default http//localhost9377|http://localhost:9377|
+|User ID||rb-test|
+|Server path|Folder where the Camofox process will be started. If using npm start, use the camofox-browser repository folder.|C:\Users\pc\Downloads|
+|Start command|Command used to start Camofox. Default npx -y @askjo/camofox-browser|npx -y @askjo/camofox-browser|
+|Wait seconds||20|
+|Assign result to variable||result|
+
+### Health Check
+  
+Check if the Camofox server is running and reachable.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Base URL|Camofox server URL. Default http//localhost9377|http://localhost:9377|
+|User ID||rb-test|
+|Assign result to variable||result|
+
+### Create Tab
+  
+Create a new Camofox tab and open the provided URL.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Base URL||http://localhost:9377|
+|User ID||rb-test|
+|URL||https://example.com|
+|Session key||default|
+|Request timeout (seconds)||60|
+|Assign result to variable||result|
+
+### Navigate
+  
+Navigate an existing Camofox tab to a new URL.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Base URL||http://localhost:9377|
+|User ID||rb-test|
+|Tab ID||tabId|
+|URL||https://example.com|
+|Assign result to variable||result|
+
+### Get Snapshot
+  
+Get the accessibility snapshot of a Camofox tab.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Base URL||http://localhost:9377|
+|User ID||rb-test|
+|Tab ID||tabId|
+|Assign result to variable||result|
+
+### Click
+  
+Click an element by its snapshot reference.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Base URL||http://localhost:9377|
+|User ID||rb-test|
+|Tab ID||tabId|
+|Element reference||e1|
+|Assign result to variable||result|
+
+### Type Text
+  
+Type text into an element by its snapshot reference.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Base URL||http://localhost:9377|
+|User ID||rb-test|
+|Tab ID||tabId|
+|Element reference||e1|
+|Text||Text to type|
+|Press Enter after typing|||
+|Assign result to variable||result|
+
+### Screenshot
+  
+Take a screenshot of a Camofox tab.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Base URL||http://localhost:9377|
+|User ID||rb-test|
+|Tab ID||tabId|
+|Save path (optional)||C:\tmp\camofox_capture.png|
+|Assign result to variable||result|
+
+### Stop Server
+  
+Stop the Camofox Browser Server using the process PID.
+|Parameters|Description|example|
+| --- | --- | --- |
+|PID|PID returned by the Start Server command.|12345|
+|Assign result to variable||result|
+
+### Download File 
+  
+Monitor and capture downloads natively on the CamoFox timetable in Excel, PDF or TXT formats.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Base URL|Camofox server URL. Default http//localhost9377|http://localhost:9377|
+|User ID||rb-test|
+|Tab ID|Tab ID of CamoFox where the download is triggered.|tab_1|
+|Save path|Path to save the file. If not specified, it defaults to 'archivo_descargado' with the chosen format extension in the current directory.|C:\Users\Downloads\cartola.xlsx|
+|File Type|Format to download Excel, PDF, or TXT.||
+|Overwrite file if exists|||
+|Assign result to variable||result|
+
+### Evaluate JS
+  
+Execute a JavaScript expression in the current tab.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Base URL||http://localhost:9377|
+|User ID||rb-test|
+|Tab ID||tabId|
+|Expression||JavaScript expression|
+|Request timeout||30|
+|Assign result to variable||result|
+
+### Hover
+  
+Move the mouse over an element using its snapshot reference or a CSS selector.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Base URL|Camofox server URL. Default http//localhost9377|http://localhost:9377|
+|User ID|User ID used when creating the tab.|rb-test|
+|Tab ID||tabId|
+|Element reference|Snapshot reference, for example e13. Use either reference or selector.|e13|
+|CSS selector|CSS selector. Used only if no reference is provided.|button.download|
+|Assign result to variable||result|
