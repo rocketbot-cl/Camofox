@@ -15,6 +15,22 @@ To install the module in Rocketbot Studio, it can be done in two ways:
 1. Manual: __Download__ the .zip file and unzip it in the modules folder. The folder name must be the same as the module and inside it must have the following files and folders: \__init__.py, package.json, docs, example and libs. If you have the application open, refresh your browser to be able to use the new module.
 2. Automatic: When entering Rocketbot Studio on the right margin you will find the **Addons** section, select **Install Mods**, search for the desired module and press install.  
 
+## How to use this Module
+This module is an alternative to other web modules like WebPro. It uses a Firefox-based browser geared towards automation and anti-detection techniques, running in the background.
+
+1. To use this module, you need to install Node.js on your machine, as well as install the Camoufox package from the console (CMD or terminal) with this command: `npx -y @askjo/camofox-browser`.
+
+2. The module operates in headless mode (background), so a browser instance is not visually rendered. Page state validation must be performed using the `capture` command.
+
+3. To obtain the elements you want to interact with in this module, use the `get snapshot` command. This command returns a structured tree of the page (based on the DOM), where each element is represented by internal identifiers such as `[e1], [e2], [e3],` corresponding to the open tab in Camoufox.
+
+4. Downloads performed with the module are generated in the background and initially stored in the system's Temp folder. 
+However, using the "download file" command, it is possible to move the file from this temporary location to the desired path, for example, the Windows Downloads folder or another custom location defined by the user.
+
+5. The module may exhibit variations in response time, so the creation of tabs or other actions may take some time to appear or may not execute immediately. It is recommended to verify each action before proceeding to the next.
+
+6. During execution in a development environment, the session may be lost if there is inactivity or delays between actions, which may result in the error: "Failed to establish a new connection: [WinError 10061]", indicating that the server needs to be restarted to re-establish the connection.
+
 
 ## Description of the commands
 

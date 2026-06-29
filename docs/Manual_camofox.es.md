@@ -16,6 +16,26 @@ Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
 2. Automática: Al ingresar a Rocketbot Studio sobre el margen derecho encontrara la sección de **Addons**, seleccionar **Install Mods**, buscar el modulo deseado y presionar install.  
 
 
+
+## Como usar este modulo
+Este módulo es una alternativa a otros módulos web como WebPro. Utiliza un navegador basado en Firefox orientado a automatización y técnicas anti-detección, ejecutándose en segundo plano. 
+
+1. Para poder ocupar este modulo es necesario instalar Node.js en la maquina,asi como, instalar el paquete de Camoufox desde la consola (CMD o terminal) con este comando `npx -y @askjo/camofox-browser`.
+
+2. El módulo opera en modo headless (segundo plano), por lo que no se renderiza visualmente una instancia del navegador.
+La validación del estado de la página debe realizarse mediante el uso del comando de captura de pantalla.
+
+3.Para obtener los elementos con los que se desea interactuar en este módulo, se debe utilizar el comando obtener snapshot.Este comando devuelve un árbol estructurado de la página (basado en el DOM), donde cada elemento se representa mediante identificadores internos como [e1], [e2], [e3], correspondientes a la pestaña abierta en Camoufox.
+
+4. Las 
+descargas realizadas con el módulo se generan en segundo plano y se almacenan inicialmente en la carpeta Temp del sistema.Sin embargo, mediante el comando “descargar archivo”, es posible mover el archivo desde esta ubicación temporal hacia la ruta deseada, por ejemplo, la carpeta de Descargas de Windows u otra ubicación personalizada definida por el usuario.
+
+5. El módulo puede presentar variaciones en el tiempo de respuesta, por lo que la creación de pestañas u otras acciones pueden tardar en reflejarse o no ejecutarse de forma inmediata. Se recomienda validar cada acción antes de continuar con la siguiente.
+
+6. Durante la ejecución en entorno de desarrollo, la sesión puede perderse si existe inactividad o demoras entre acciones, lo que puede provocar el error:
+Failed to establish a new connection: [WinError 10061], lo que indica que es necesario reiniciar el servidor para restablecer la conexión.
+
+
 ## Descripción de los comandos
 
 ### Iniciar Servidor
