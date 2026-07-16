@@ -46,7 +46,7 @@ Obtiene una captura de pantalla de una pestana de Camofox.
 Detiene el servidor de Camofox Browser usando el PID del proceso.
 
 10. Descargar Archivo  
-Monitorea y captura descargas de forma nativa en la carpeta temporal de CamoFox en formatos Excel, PDF o TXT.
+Monitorea y captura descargas de forma nativa en la carpeta temporal de CamoFox en formatos Excel, PDF, TXT Y ZIP.
 
 11. Ejecutar JS  
 Ejecuta una expresion JavaScript en la pestana actual.

@@ -46,7 +46,7 @@ Obtem uma captura de tela de uma aba do Camofox.
 Para o servidor Camofox Browser usando o PID do processo.
 
 10. Baixar Arquivo  
-Monitore e capture descargas de formato nativo na pasta temporal do CamoFox nos formatos Excel, PDF ou TXT.
+Monitora e captura downloads nativamente na pasta temporária do CamoFox nos formatos Excel, PDF, TXT e ZIP.
 
 11. Executar JS  
 Executa uma expressao JavaScript na aba atual.

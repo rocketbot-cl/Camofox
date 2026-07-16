@@ -32,6 +32,9 @@ Este módulo é uma alternativa a outros módulos web como o WebPro. Ele utiliza
 
 6. Durante a execução em um ambiente de desenvolvimento, a sessão pode ser perdida se houver inatividade ou atrasos entre as ações, o que pode resultar no erro: "Falha ao estabelecer uma nova conexão: [WinError 10061]", indicando que o servidor precisa ser reiniciado para restabelecer a conexão.
 
+7.Devido às técnicas de evasão de deteção (anti-bot) utilizadas pelo Camoufox, o navegador pode alterar dinamicamente a resolução, o tamanho da janela de visualização (viewport) ou
+ simular diferentes dispositivos em cada sessão. Consequentemente, as capturas de ecrã tiradas em segundo plano podem ser renderizadas com dimensões variáveis ou apresentadas de forma incompleta.
+
 
 
 ## Descrição do comando
@@ -43,7 +46,7 @@ Inicia o servidor Camofox Browser em segundo plano.
 | --- | --- | --- |
 |URL base|URL do servidor Camofox. Padrao http//localhost9377|http://localhost:9377|
 |User ID||rb-test|
-|Caminho do servidor|Pasta de onde o processo Camofox sera iniciado. Se usar npm start, informe a pasta do repositorio camofox-browser.|C:\Users\pc\Downloads|
+|Caminho do servidor|Pasta de onde o processo Camofox sera iniciado. Se usar npm start, informe a pasta do repositorio camofox-browser.|C:/Users/pc/Downloads|
 |Comando de inicio|Comando usado para iniciar o Camofox. Padrao npx -y @askjo/camofox-browser|npx -y @askjo/camofox-browser|
 |Segundos de espera||20|
 |Atribuir resultado a variavel||resultado|
@@ -135,14 +138,14 @@ Para o servidor Camofox Browser usando o PID do processo.
 
 ### Baixar Arquivo
   
-Monitore e capture descargas de formato nativo na pasta temporal do CamoFox nos formatos Excel, PDF ou TXT.
+Monitora e captura downloads nativamente na pasta temporária do CamoFox nos formatos Excel, PDF, TXT e ZIP.
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |URL base|URL do servidor Camofox. Padrao http//localhost9377|http://localhost:9377|
 |User ID||rb-test|
 |ID Aba|ID da aba do CamoFox de onde o download é executado.|tab_1|
 |Caminho de salvamento|Caminho onde o arquivo será salvo. Se não especificado, por padrão será criado no diretório atual com a extensão do formato escolhido.|C:\Users\Downloads\cartola.xlsx|
-|Tipo de Arquivo|Formato para baixar Excel, PDF ou TXT.||
+|Tipo de Arquivo|Formato para baixar Excel, PDF,TXT ou ZIP.||
 |Sobrescrever se existir|||
 |Atribuir resultado a variavel||resultado|
 

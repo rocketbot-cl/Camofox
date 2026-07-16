@@ -13,6 +13,8 @@ This module is an alternative to other web modules like WebPro. It uses a Firefo
 
 6. During execution in a development environment, the session may be lost if there is inactivity or delays between actions, which may result in the error: "Failed to establish a new connection: [WinError 10061]", indicating that the server needs to be restarted to re-establish the connection.
 
+7. Due to the detection-evasion (anti-bot) techniques used by Camoufox, the browser may dynamically alter the resolution or viewport size, or simulate different devices during each session. As a result, screenshots taken in the background may be rendered with varying dimensions or appear incomplete.
+
 ---
 
 ## Como usar este modulo
@@ -23,7 +25,7 @@ Este módulo es una alternativa a otros módulos web como WebPro. Utiliza un nav
 2. El módulo opera en modo headless (segundo plano), por lo que no se renderiza visualmente una instancia del navegador.
 La validación del estado de la página debe realizarse mediante el uso del comando de captura de pantalla.
 
-3.Para obtener los elementos con los que se desea interactuar en este módulo, se debe utilizar el comando obtener snapshot.Este comando devuelve un árbol estructurado de la página (basado en el DOM), donde cada elemento se representa mediante identificadores internos como [e1], [e2], [e3], correspondientes a la pestaña abierta en Camoufox.
+3. Para obtener los elementos con los que se desea interactuar en este módulo, se debe utilizar el comando obtener snapshot.Este comando devuelve un árbol estructurado de la página (basado en el DOM), donde cada elemento se representa mediante identificadores internos como [e1], [e2], [e3], correspondientes a la pestaña abierta en Camoufox.
 
 4. Las descargas realizadas con el módulo se generan en segundo plano y se almacenan inicialmente en la carpeta Temp del sistema.Sin embargo, mediante el comando “descargar archivo”, es posible mover el archivo desde esta ubicación temporal hacia la ruta deseada, por ejemplo, la carpeta de Descargas de Windows u otra ubicación personalizada definida por el usuario.
 
@@ -32,6 +34,7 @@ La validación del estado de la página debe realizarse mediante el uso del coma
 6. Durante la ejecución en entorno de desarrollo, la sesión puede perderse si existe inactividad o demoras entre acciones, lo que puede provocar el error:
 Failed to establish a new connection: [WinError 10061], lo que indica que es necesario reiniciar el servidor para restablecer la conexión.
 
+7. Debido a las técnicas de evasión de detección (anti-bot) que utiliza Camoufox, el navegador puede alterar dinámicamente la resolución, el tamaño del viewport (ventana gráfica) o simular diferentes dispositivos en cada sesión. Como consecuencia, las capturas de pantalla tomadas en segundo plano pueden renderizarse con dimensiones variables o mostrarse incompletas.
 ---
 ## Como usar este módulo
 Este módulo é uma alternativa a outros módulos web como o WebPro. Ele utiliza um navegador baseado no Firefox, voltado para automação e técnicas anti-detecção, que roda em segundo plano.
@@ -47,5 +50,7 @@ Este módulo é uma alternativa a outros módulos web como o WebPro. Ele utiliza
 5. O módulo pode apresentar variações no tempo de resposta, portanto, a criação de abas ou outras ações pode demorar um pouco para aparecer ou pode não ser executada imediatamente. Recomenda-se verificar cada ação antes de prosseguir para a próxima.
 
 6. Durante a execução em um ambiente de desenvolvimento, a sessão pode ser perdida se houver inatividade ou atrasos entre as ações, o que pode resultar no erro: "Falha ao estabelecer uma nova conexão: [WinError 10061]", indicando que o servidor precisa ser reiniciado para restabelecer a conexão.
+
+7.Devido às técnicas de evasão de deteção (anti-bot) utilizadas pelo Camoufox, o navegador pode alterar dinamicamente a resolução, o tamanho da janela de visualização (viewport) ou simular diferentes dispositivos em cada sessão. Consequentemente, as capturas de ecrã tiradas em segundo plano podem ser renderizadas com dimensões variáveis ou apresentadas de forma incompleta.
 
 

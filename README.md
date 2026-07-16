@@ -46,7 +46,7 @@ Take a screenshot of a Camofox tab.
 Stop the Camofox Browser Server using the process PID.
 
 10. Download File   
-Monitor and capture downloads natively on the CamoFox timetable in Excel, PDF or TXT formats.
+Monitors and captures downloads natively in CamoFox's temporary folder in Excel, PDF, TXT, and ZIP formats.
 
 11. Evaluate JS  
 Execute a JavaScript expression in the current tab.

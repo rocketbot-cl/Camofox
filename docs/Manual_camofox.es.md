@@ -25,7 +25,7 @@ Este módulo es una alternativa a otros módulos web como WebPro. Utiliza un nav
 2. El módulo opera en modo headless (segundo plano), por lo que no se renderiza visualmente una instancia del navegador.
 La validación del estado de la página debe realizarse mediante el uso del comando de captura de pantalla.
 
-3.Para obtener los elementos con los que se desea interactuar en este módulo, se debe utilizar el comando obtener snapshot.Este comando devuelve un árbol estructurado de la página (basado en el DOM), donde cada elemento se representa mediante identificadores internos como [e1], [e2], [e3], correspondientes a la pestaña abierta en Camoufox.
+3. Para obtener los elementos con los que se desea interactuar en este módulo, se debe utilizar el comando obtener snapshot.Este comando devuelve un árbol estructurado de la página (basado en el DOM), donde cada elemento se representa mediante identificadores internos como [e1], [e2], [e3], correspondientes a la pestaña abierta en Camoufox.
 
 4. Las 
 descargas realizadas con el módulo se generan en segundo plano y se almacenan inicialmente en la carpeta Temp del sistema.Sin embargo, mediante el comando “descargar archivo”, es posible mover el archivo desde esta ubicación temporal hacia la ruta deseada, por ejemplo, la carpeta de Descargas de Windows u otra ubicación personalizada definida por el usuario.
@@ -35,6 +35,8 @@ descargas realizadas con el módulo se generan en segundo plano y se almacenan i
 6. Durante la ejecución en entorno de desarrollo, la sesión puede perderse si existe inactividad o demoras entre acciones, lo que puede provocar el error:
 Failed to establish a new connection: [WinError 10061], lo que indica que es necesario reiniciar el servidor para restablecer la conexión.
 
+7. Debido a las técnicas de evasión de detección (anti-bot) que utiliza Camoufox, el 
+navegador puede alterar dinámicamente la resolución, el tamaño del viewport (ventana gráfica) o simular diferentes dispositivos en cada sesión. Como consecuencia, las capturas de pantalla tomadas en segundo plano pueden renderizarse con dimensiones variables o mostrarse incompletas.
 
 ## Descripción de los comandos
 
@@ -45,7 +47,7 @@ Inicia el servidor de Camofox Browser en segundo plano.
 | --- | --- | --- |
 |URL base|URL del servidor Camofox. Por defecto http//localhost9377|http://localhost:9377|
 |User ID||rb-test|
-|Ruta del servidor|Carpeta desde donde se iniciara el proceso de Camofox. Si se usa npm start, indicar la carpeta del repositorio camofox-browser.|C:\Users\pc\Downloads|
+|Ruta del servidor|Carpeta desde donde se iniciara el proceso de Camofox. Si se usa npm start, indicar la carpeta del repositorio camofox-browser.|C:/Users/pc/Downloads|
 |Comando de inicio|Comando utilizado para iniciar Camofox. Por defecto npx -y @askjo/camofox-browser|npx -y @askjo/camofox-browser|
 |Segundos de espera||20|
 |Asignar resultado a variable||resultado|
@@ -137,14 +139,14 @@ Detiene el servidor de Camofox Browser usando el PID del proceso.
 
 ### Descargar Archivo
   
-Monitorea y captura descargas de forma nativa en la carpeta temporal de CamoFox en formatos Excel, PDF o TXT.
+Monitorea y captura descargas de forma nativa en la carpeta temporal de CamoFox en formatos Excel, PDF, TXT Y ZIP.
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
 |URL base|URL del servidor Camofox. Por defecto http//localhost9377|http://localhost:9377|
 |User ID||rb-test|
 |ID Pestana|ID de la pestaña de CamoFox desde donde se ejecuta la descarga.|tab_1|
 |Ruta de guardado|Ruta donde se guardará el archivo. Si no se especifica, por defecto se creará en el directorio actual con la extensión del formato elegido.|C:\Users\Downloads\cartola.xlsx|
-|Tipo de Archivo|Formato a descargar Excel, PDF o TXT.||
+|Tipo de Archivo|Formato a descargar Excel, PDF, TXT o ZIP.||
 |Sobrescribir si existe|||
 |Asignar resultado a variable||resultado|
 

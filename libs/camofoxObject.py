@@ -115,8 +115,10 @@ class CamofoxClient:
                 "stdout": stdout.decode("utf-8", "ignore"),
                 "stderr": stderr.decode("utf-8", "ignore")
             }
-
-        os.kill(int(pid), signal.SIGTERM)
+        try:
+            os.kill(int(pid), signal.SIGTERM)
+        except ProcessLookupError:
+            pass
 
         return {
             "ok": True,

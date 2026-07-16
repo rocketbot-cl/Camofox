@@ -75,8 +75,8 @@
                         "required": false
                     },
                     {
-                        "type": "input",
-                        "placeholder": "C:\\Users\\pc\\Downloads",
+                        "type": "folder_select",
+                        "placeholder": "C:/Users/pc/Downloads",
                         "title": {
                             "en": "Server path",
                             "es": "Ruta del servidor",
@@ -980,19 +980,19 @@
         {
             "en": {
                 "title": "Download File ",
-                "description": "Monitor and capture downloads natively on the CamoFox timetable in Excel, PDF or TXT formats.",
+                "description": "Monitors and captures downloads natively in CamoFox's temporary folder in Excel, PDF, TXT, and ZIP formats.",
                 "title_options": "Select Option",
                 "options": null
             },
             "es": {
                 "title": "Descargar Archivo",
-                "description": "Monitorea y captura descargas de forma nativa en la carpeta temporal de CamoFox en formatos Excel, PDF o TXT.",
+                "description": "Monitorea y captura descargas de forma nativa en la carpeta temporal de CamoFox en formatos Excel, PDF, TXT Y ZIP.",
                 "title_options": "Seleccione una opcion",
                 "options": null
             },
             "pr": {
                 "title": "Baixar Arquivo",
-                "description": "Monitore e capture descargas de formato nativo na pasta temporal do CamoFox nos formatos Excel, PDF ou TXT.",
+                "description": "Monitora e captura downloads nativamente na pasta temporária do CamoFox nos formatos Excel, PDF, TXT e ZIP.",
                 "title_options": "Selecione uma opcao",
                 "options": null
             },
@@ -1072,12 +1072,12 @@
                         "id": "file_type",
                         "css": "col-md-2",
                         "required": false,
-                        "options": ["Excel", "PDF", "TXT"],
+                        "options": ["Excel", "PDF", "TXT", "ZIP"],
                         "value": "Excel",
                         "description": {
-                            "en": "Format to download: Excel, PDF, or TXT.",
-                            "es": "Formato a descargar: Excel, PDF o TXT.",
-                            "pr": "Formato para baixar: Excel, PDF ou TXT."
+                            "en": "Format to download: Excel, PDF,TXT or ZIP.",
+                            "es": "Formato a descargar: Excel, PDF, TXT o ZIP.",
+                            "pr": "Formato para baixar: Excel, PDF,TXT ou ZIP."
                         }
                     },
                     {

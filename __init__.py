@@ -328,9 +328,8 @@ try:
             SetVar(var, response)
 
     if module == "stop_server":
-
         pid = GetParams("pid")
-        var = GetParams("var")
+        var = GetParams("result_var")
 
         if not pid:
             raise Exception("The pid parameter is required.")
@@ -338,6 +337,7 @@ try:
         client = _get_client()
 
         response = client.stop_server(pid=pid)
+        
 
         if var:
             SetVar(var, response)

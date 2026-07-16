@@ -31,6 +31,9 @@ However, using the "download file" command, it is possible to move the file from
 
 6. During execution in a development environment, the session may be lost if there is inactivity or delays between actions, which may result in the error: "Failed to establish a new connection: [WinError 10061]", indicating that the server needs to be restarted to re-establish the connection.
 
+7. Due to the detection-evasion (anti-bot) techniques used by Camoufox, the browser may dynamically alter the resolution or viewport size, or simulate different devices during each session. As a result, screenshots taken in the background may be rendered with
+ varying dimensions or appear incomplete.
+
 
 ## Description of the commands
 
@@ -41,7 +44,7 @@ Start the Camofox Browser Server in background.
 | --- | --- | --- |
 |Base URL|Camofox server URL. Default http//localhost9377|http://localhost:9377|
 |User ID||rb-test|
-|Server path|Folder where the Camofox process will be started. If using npm start, use the camofox-browser repository folder.|C:\Users\pc\Downloads|
+|Server path|Folder where the Camofox process will be started. If using npm start, use the camofox-browser repository folder.|C:/Users/pc/Downloads|
 |Start command|Command used to start Camofox. Default npx -y @askjo/camofox-browser|npx -y @askjo/camofox-browser|
 |Wait seconds||20|
 |Assign result to variable||result|
@@ -133,14 +136,14 @@ Stop the Camofox Browser Server using the process PID.
 
 ### Download File 
   
-Monitor and capture downloads natively on the CamoFox timetable in Excel, PDF or TXT formats.
+Monitors and captures downloads natively in CamoFox's temporary folder in Excel, PDF, TXT, and ZIP formats.
 |Parameters|Description|example|
 | --- | --- | --- |
 |Base URL|Camofox server URL. Default http//localhost9377|http://localhost:9377|
 |User ID||rb-test|
 |Tab ID|Tab ID of CamoFox where the download is triggered.|tab_1|
 |Save path|Path to save the file. If not specified, it defaults to 'archivo_descargado' with the chosen format extension in the current directory.|C:\Users\Downloads\cartola.xlsx|
-|File Type|Format to download Excel, PDF, or TXT.||
+|File Type|Format to download Excel, PDF,TXT or ZIP.||
 |Overwrite file if exists|||
 |Assign result to variable||result|
 
