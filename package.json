@@ -13,7 +13,7 @@
     "windows": true,
     "mac": false,
     "docker": false,
-    "name": "camofox",
+    "name": "Camofox",
     "version": "1.0.0",
     "dependencies": {},
     "title": {
