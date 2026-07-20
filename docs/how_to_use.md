@@ -15,6 +15,18 @@ This module is an alternative to other web modules like WebPro. It uses a Firefo
 
 7. Due to the detection-evasion (anti-bot) techniques used by Camoufox, the browser may dynamically alter the resolution or viewport size, or simulate different devices during each session. As a result, screenshots taken in the background may be rendered with varying dimensions or appear incomplete.
 
+8. If it is not possible to start the server using the procedure described in point 1, use the following alternative method: 
+    - Clone the repository instead of running the server using npx: 
+        - git clone https://github.com/jo-inc/camofox-browser 
+        - cd camofox-browser 
+        - npm install 
+    - Once the installation is complete, start the server by executing: 
+        - npm start
+
+9. If the server does not finish correctly and processes are still running, it is possible to release them from the console. To do so, execute the following commands: 
+    - netstat -year | findstr :9377 (What returns the PID of the process associated with port 9377) 
+    - taskkill /PID {PID} /F( Replace <PID> with the process identifier obtained in the previous step)
+
 ---
 
 ## Como usar este modulo
@@ -35,7 +47,21 @@ La validación del estado de la página debe realizarse mediante el uso del coma
 Failed to establish a new connection: [WinError 10061], lo que indica que es necesario reiniciar el servidor para restablecer la conexión.
 
 7. Debido a las técnicas de evasión de detección (anti-bot) que utiliza Camoufox, el navegador puede alterar dinámicamente la resolución, el tamaño del viewport (ventana gráfica) o simular diferentes dispositivos en cada sesión. Como consecuencia, las capturas de pantalla tomadas en segundo plano pueden renderizarse con dimensiones variables o mostrarse incompletas.
+
+8. En caso de no ser posible iniciar el servidor mediante el procedimiento descrito en el punto 1, utilizar el siguiente método alternativo:
+    - Clonar el repositorio en lugar de ejecutar el servidor mediante npx:
+        - git clone https://github.com/jo-inc/camofox-browser
+        - cd camofox-browser
+        - npm install
+    - Una vez finalizada la instalación, iniciar el servidor ejecutando:
+        - npm start
+
+9. Si el servidor no finaliza correctamente y quedan procesos en ejecución, es posible liberarlos desde la consola. Para ello, ejecutar los siguientes comandos:
+    - netstat -ano | findstr :9377 (El cual devolvera del PID del proceso asociado al puerto 9377)
+    - taskkill /PID {PID} /F( Reemplazar <PID> por el  identificador de proceso obtenido en el paso anterior)
+
 ---
+
 ## Como usar este módulo
 Este módulo é uma alternativa a outros módulos web como o WebPro. Ele utiliza um navegador baseado no Firefox, voltado para automação e técnicas anti-detecção, que roda em segundo plano.
 
@@ -51,6 +77,18 @@ Este módulo é uma alternativa a outros módulos web como o WebPro. Ele utiliza
 
 6. Durante a execução em um ambiente de desenvolvimento, a sessão pode ser perdida se houver inatividade ou atrasos entre as ações, o que pode resultar no erro: "Falha ao estabelecer uma nova conexão: [WinError 10061]", indicando que o servidor precisa ser reiniciado para restabelecer a conexão.
 
-7.Devido às técnicas de evasão de deteção (anti-bot) utilizadas pelo Camoufox, o navegador pode alterar dinamicamente a resolução, o tamanho da janela de visualização (viewport) ou simular diferentes dispositivos em cada sessão. Consequentemente, as capturas de ecrã tiradas em segundo plano podem ser renderizadas com dimensões variáveis ou apresentadas de forma incompleta.
+7. Devido às técnicas de evasão de deteção (anti-bot) utilizadas pelo Camoufox, o navegador pode alterar dinamicamente a resolução, o tamanho da janela de visualização (viewport) ou simular diferentes dispositivos em cada sessão. Consequentemente, as capturas de ecrã tiradas em segundo plano podem ser renderizadas com dimensões variáveis ou apresentadas de forma incompleta.
+
+8. Caso não seja possível iniciar o servidor através do procedimento descrito no ponto 1, utilize o seguinte método alternativo: 
+    - Clonar o repositório em vez de executar o servidor via npx: 
+        - git clone do git https://github.com/jo-inc/camofox-browser 
+        - cd camofox-browser
+    instalação npm 
+    - Uma vez finalizada a instalação, inicie o servidor executando: 
+        - npm start
+
+9. Se o servidor não for finalizado corretamente e após o processo de execução, é possível liberá-los do console. Para isso, execute os seguintes comandos: 
+    -netstat -ano | findstr :9377 (O retorno do PID do processo associado ao porto 9377) 
+    - taskkill /PID {PID} /F( Substitua <PID> pelo identificador do processo obtido no passo anterior)
 
 

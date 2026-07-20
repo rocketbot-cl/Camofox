@@ -38,6 +38,20 @@ Failed to establish a new connection: [WinError 10061], lo que indica que es nec
 7. Debido a las técnicas de evasión de detección (anti-bot) que utiliza Camoufox, el 
 navegador puede alterar dinámicamente la resolución, el tamaño del viewport (ventana gráfica) o simular diferentes dispositivos en cada sesión. Como consecuencia, las capturas de pantalla tomadas en segundo plano pueden renderizarse con dimensiones variables o mostrarse incompletas.
 
+8. En caso de no ser posible iniciar el servidor mediante el procedimiento descrito en el punto 1, utilizar el siguiente método alternativo:
+    - Clonar el repositorio en lugar de ejecutar el servidor mediante npx:
+        - git clone https://github.com/jo-inc/camofox-browser
+        - cd camofox-browser
+        - npm install
+    - Una vez finalizada la instalación, iniciar el servidor ejecutando:
+        - npm start
+
+9. Si el servidor no finaliza correctamente y quedan procesos en ejecución, es posible liberarlos desde la consola. Para ello, ejecutar los siguientes comandos:
+    - netstat -ano | findstr :9377 (El cual devolvera del PID del proceso asociado al puerto 9377)
+    - taskkill /PID {PID} /F( 
+Reemplazar <PID> por el  identificador de proceso obtenido en el paso anterior)
+
+
 ## Descripción de los comandos
 
 ### Iniciar Servidor

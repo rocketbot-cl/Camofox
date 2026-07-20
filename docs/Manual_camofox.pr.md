@@ -16,6 +16,7 @@ Para instalar o módulo no Rocketbot Studio, pode ser feito de duas formas:
 2. Automático: Ao entrar no Rocketbot Studio na margem direita você encontrará a seção **Addons**, selecione **Install Mods**, procure o módulo desejado e aperte instalar.  
 
 
+
 ## Como usar este módulo
 Este módulo é uma alternativa a outros módulos web como o WebPro. Ele utiliza um navegador baseado no Firefox, voltado para automação e técnicas anti-detecção, que roda em segundo plano.
 
@@ -25,15 +26,27 @@ Este módulo é uma alternativa a outros módulos web como o WebPro. Ele utiliza
 
 3. Para obter os elementos com os quais você deseja interagir neste módulo, use o comando `get snapshot`. Este comando retorna uma árvore estruturada da página (baseada no DOM), onde cada elemento é representado por identificadores internos como `[e1], [e2], [e3]`, correspondentes à aba aberta no Camoufox.
 
-4. Os downloads realizados com o módulo são gerados em segundo plano
- e inicialmente armazenados na pasta Temp do sistema. No entanto, usando o comando "baixar arquivo", é possível mover o arquivo desse local temporário para o caminho desejado, por exemplo, a pasta Downloads do Windows ou outro local personalizado definido pelo usuário.
+4. Os downloads realizados com o módulo são gerados em segundo 
+plano e inicialmente armazenados na pasta Temp do sistema. No entanto, usando o comando "baixar arquivo", é possível mover o arquivo desse local temporário para o caminho desejado, por exemplo, a pasta Downloads do Windows ou outro local personalizado definido pelo usuário.
 
 5. O módulo pode apresentar variações no tempo de resposta, portanto, a criação de abas ou outras ações pode demorar um pouco para aparecer ou pode não ser executada imediatamente. Recomenda-se verificar cada ação antes de prosseguir para a próxima.
 
 6. Durante a execução em um ambiente de desenvolvimento, a sessão pode ser perdida se houver inatividade ou atrasos entre as ações, o que pode resultar no erro: "Falha ao estabelecer uma nova conexão: [WinError 10061]", indicando que o servidor precisa ser reiniciado para restabelecer a conexão.
 
-7.Devido às técnicas de evasão de deteção (anti-bot) utilizadas pelo Camoufox, o navegador pode alterar dinamicamente a resolução, o tamanho da janela de visualização (viewport) ou
- simular diferentes dispositivos em cada sessão. Consequentemente, as capturas de ecrã tiradas em segundo plano podem ser renderizadas com dimensões variáveis ou apresentadas de forma incompleta.
+7. Devido às técnicas de evasão de deteção (anti-bot) utilizadas pelo Camoufox, o navegador pode alterar dinamicamente a resolução, o tamanho da janela de visualização 
+(viewport) ou simular diferentes dispositivos em cada sessão. Consequentemente, as capturas de ecrã tiradas em segundo plano podem ser renderizadas com dimensões variáveis ou apresentadas de forma incompleta.
+
+8. Caso não seja possível iniciar o servidor através do procedimento descrito no ponto 1, utilize o seguinte método alternativo: 
+    - Clonar o repositório em vez de executar o servidor via npx: 
+        - git clone do git https://github.com/jo-inc/camofox-browser 
+        - cd camofox-browser
+    instalação npm 
+    - Uma vez finalizada a instalação, inicie o servidor executando: 
+        - npm start
+
+9. Se o servidor não for finalizado corretamente e após o processo de execução, é possível liberá-los do console. Para isso, execute os seguintes comandos: 
+    -netstat -ano | findstr :9377 (O retorno do PID do processo associado ao porto 9377) 
+    - taskkill /PID {PID} /F( Substitua <PID> pelo identificador do processo obtido no passo anterior)
 
 
 

@@ -34,6 +34,18 @@ However, using the "download file" command, it is possible to move the file from
 7. Due to the detection-evasion (anti-bot) techniques used by Camoufox, the browser may dynamically alter the resolution or viewport size, or simulate different devices during each session. As a result, screenshots taken in the background may be rendered with
  varying dimensions or appear incomplete.
 
+8. If it is not possible to start the server using the procedure described in point 1, use the following alternative method: 
+    - Clone the repository instead of running the server using npx: 
+        - git clone https://github.com/jo-inc/camofox-browser 
+        - cd camofox-browser 
+        - npm install 
+    - Once the installation is complete, start the server by executing: 
+        - npm start
+
+9. If the server does not finish correctly and processes are still running, it is possible to release them from the console. To do so, execute the following commands: 
+    - netstat -year | findstr :9377 (What returns the PID of the process associated with port 9377) 
+    - taskkill /PID {PID} /F( Replace <PID> with the process identifier obtained in the previous step)
+
 
 ## Description of the commands
 
