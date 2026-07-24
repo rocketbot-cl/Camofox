@@ -153,7 +153,7 @@ Monitors and captures downloads natively in CamoFox's temporary folder in Excel,
 | --- | --- | --- |
 |Base URL|Camofox server URL. Default http//localhost9377|http://localhost:9377|
 |User ID||rb-test|
-|Tab ID|Tab ID of CamoFox where the download is triggered.|tab_1|
+|Tab ID||tabId|
 |Save path|Path to save the file. If not specified, it defaults to 'archivo_descargado' with the chosen format extension in the current directory.|C:\Users\Downloads\cartola.xlsx|
 |File Type|Format to download Excel, PDF,TXT or ZIP.||
 |Overwrite file if exists|||
@@ -181,4 +181,16 @@ Move the mouse over an element using its snapshot reference or a CSS selector.
 |Tab ID||tabId|
 |Element reference|Snapshot reference, for example e13. Use either reference or selector.|e13|
 |CSS selector|CSS selector. Used only if no reference is provided.|button.download|
+|Assign result to variable||result|
+
+### Scroll
+  
+Scroll the active page in Camofox according to the number of pixels indicated.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Base URL|Camofox server URL. Default http//localhost9377|http://localhost:9377|
+|User ID|User ID used when creating the tab.|rb-test|
+|Tab ID||tabId|
+|Scroll direction|Scroll direction.|down/up|
+|Position|Select the position in pixels.|500|
 |Assign result to variable||result|

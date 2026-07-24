@@ -158,7 +158,7 @@ Monitorea y captura descargas de forma nativa en la carpeta temporal de CamoFox 
 | --- | --- | --- |
 |URL base|URL del servidor Camofox. Por defecto http//localhost9377|http://localhost:9377|
 |User ID||rb-test|
-|ID Pestana|ID de la pestaña de CamoFox desde donde se ejecuta la descarga.|tab_1|
+|ID Pestana||tabId|
 |Ruta de guardado|Ruta donde se guardará el archivo. Si no se especifica, por defecto se creará en el directorio actual con la extensión del formato elegido.|C:\Users\Downloads\cartola.xlsx|
 |Tipo de Archivo|Formato a descargar Excel, PDF, TXT o ZIP.||
 |Sobrescribir si existe|||
@@ -186,4 +186,16 @@ Mueve el mouse sobre un elemento usando su referencia del snapshot o un selector
 |ID de pestana||tabId|
 |Referencia del elemento|Referencia del snapshot, por ejemplo e13. Usar referencia o selector.|e13|
 |Selector CSS|Selector CSS. Se usa solo si no se informa referencia.|button.download|
+|Asignar resultado a variable||resultado|
+
+### Scroll
+  
+Desplaza la página activa en Camofox según la cantidad de píxeles indicada.
+|Parámetros|Descripción|ejemplo|
+| --- | --- | --- |
+|URL base|URL del servidor Camofox. Por defecto http//localhost9377|http://localhost:9377|
+|User ID|User ID utilizado al crear la pestana.|rb-test|
+|ID de pestana||tabId|
+|Dirección del scroll|Dirección del desplazamiento.|down/up|
+|Posicion|Seleccione la posicion en pixeles.|500|
 |Asignar resultado a variable||resultado|

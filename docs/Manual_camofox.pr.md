@@ -156,7 +156,7 @@ Monitora e captura downloads nativamente na pasta temporária do CamoFox nos for
 | --- | --- | --- |
 |URL base|URL do servidor Camofox. Padrao http//localhost9377|http://localhost:9377|
 |User ID||rb-test|
-|ID Aba|ID da aba do CamoFox de onde o download é executado.|tab_1|
+|ID Aba||tabId|
 |Caminho de salvamento|Caminho onde o arquivo será salvo. Se não especificado, por padrão será criado no diretório atual com a extensão do formato escolhido.|C:\Users\Downloads\cartola.xlsx|
 |Tipo de Arquivo|Formato para baixar Excel, PDF,TXT ou ZIP.||
 |Sobrescrever se existir|||
@@ -184,4 +184,16 @@ Move o mouse sobre um elemento usando sua referencia do snapshot ou um seletor C
 |ID da aba||tabId|
 |Referencia do elemento|Referencia do snapshot, por exemplo e13. Use referencia ou seletor.|e13|
 |Seletor CSS|Seletor CSS. Usado somente se nenhuma referencia for informada.|button.download|
+|Atribuir resultado a variavel||resultado|
+
+### Scroll
+  
+Desinstale a página ativa no Camofox de acordo com a quantidade de pixels indicada
+|Parâmetros|Descrição|exemplo|
+| --- | --- | --- |
+|URL base|URL do servidor Camofox. Padrao http//localhost9377|http://localhost:9377|
+|User ID|User ID usado ao criar a aba.|rb-test|
+|ID da aba||tabId|
+|Direção do scroll|Direção do deslocamento.|down/up|
+|Posição|Selecione a posição em pixels.|500|
 |Atribuir resultado a variavel||resultado|

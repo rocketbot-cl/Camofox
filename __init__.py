@@ -326,6 +326,30 @@ try:
 
         if var:
             SetVar(var, response)
+            
+    if module == "scroll":
+        tab_id = GetParams("tab_id")
+        direction = GetParams("direction")
+        amount = GetParams("amount")
+        var = GetParams("var")
+        
+        if not tab_id:
+            raise Exception("The tab_id parameter is required.")
+        
+        if direction:
+            direction = str(direction).strip()
+        
+        client = _get_client()
+        response = client.scroll(
+            tab_id=tab_id,
+            direction=direction if direction else "down",
+            amount=amount if amount else 500
+        )
+        
+        if var:
+            SetVar(var, response)
+            
+    
 
     if module == "stop_server":
         pid = GetParams("pid")

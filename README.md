@@ -52,7 +52,10 @@ Monitors and captures downloads natively in CamoFox's temporary folder in Excel,
 Execute a JavaScript expression in the current tab.
 
 12. Hover  
-Move the mouse over an element using its snapshot reference or a CSS selector.  
+Move the mouse over an element using its snapshot reference or a CSS selector.
+
+13. Scroll  
+Scroll the active page in Camofox according to the number of pixels indicated.  
 
 
 

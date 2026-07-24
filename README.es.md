@@ -52,7 +52,10 @@ Monitorea y captura descargas de forma nativa en la carpeta temporal de CamoFox 
 Ejecuta una expresion JavaScript en la pestana actual.
 
 12. Hover  
-Mueve el mouse sobre un elemento usando su referencia del snapshot o un selector CSS.  
+Mueve el mouse sobre un elemento usando su referencia del snapshot o un selector CSS.
+
+13. Scroll  
+Desplaza la página activa en Camofox según la cantidad de píxeles indicada.  
 
 
 

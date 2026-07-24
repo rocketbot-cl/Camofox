@@ -52,7 +52,10 @@ Monitora e captura downloads nativamente na pasta temporária do CamoFox nos for
 Executa uma expressao JavaScript na aba atual.
 
 12. Hover  
-Move o mouse sobre um elemento usando sua referencia do snapshot ou um seletor CSS.  
+Move o mouse sobre um elemento usando sua referencia do snapshot ou um seletor CSS.
+
+13. Scroll  
+Desinstale a página ativa no Camofox de acordo com a quantidade de pixels indicada  
 
 
 

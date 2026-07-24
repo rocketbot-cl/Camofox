@@ -260,6 +260,7 @@ class CamofoxClient:
             "ref": ref
         }
         r = self.session.post(f"{self.base_url}/tabs/{tab_id}/click", json=payload, timeout=30)
+        
         r.raise_for_status()
         return r.json()
 
@@ -757,3 +758,19 @@ class CamofoxClient:
             if saved_path:
                 response["savedPath"] = saved_path
             return response
+        
+    def scroll(self, tab_id, direction: str, amount: int):
+    # La URL DEBE incluir /tabs/{tab_id}/action
+        url = f"{self.base_url}/tabs/{tab_id}/scroll"
+        
+        payload = {
+            "userId": self.user_id,
+            "direction":str(direction).lower(),
+            "amount": int (amount)
+        
+        }
+        
+        r = requests.post(url, json=payload)
+        r.raise_for_status()
+        return r.json()
+        
